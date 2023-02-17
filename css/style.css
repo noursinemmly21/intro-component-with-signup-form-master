@@ -1,0 +1,166 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --Red: hsl(0, 100%, 74%);
+    --Green: hsl(154, 59%, 51%);
+    --Blue: hsl(248, 32%, 49%);
+    --Dark-Blue: hsl(249, 10%, 26%); 
+    --Grayish-Blue: hsl(246, 25%, 77%);
+    --height:100%;
+}
+.cards{
+    position: relative;
+    height: var(--height);
+    margin-top: 33px;
+    margin-bottom: 50px;
+}
+.cards .image{
+    position: absolute;
+    z-index: -1;
+    height: var(--height);
+    width: 100%;
+}
+.cards .image img{
+    position: absolute;
+    width: 100%;
+    height: var(--height);
+    object-fit: cover;
+}
+.cards .image::before{
+content: "";
+position: absolute;
+width: 100%;
+height: var(--height);
+background-color:hsla(0, 100%, 74%, 0.822);
+z-index: 0;
+}
+.cards .row{
+    height: var(--height);
+}
+.cards .text{
+    padding: 156px 31px;
+}
+.cards .text .titre h2{
+    color: white;
+    font-weight: 700;
+    text-align: center;
+}
+.cards .text  p{
+    color: white;
+    padding-left: 43px;
+    font-size: 14px;
+}
+.cards .information{
+    height: 100%;
+    padding-top: 40px;
+}
+.cards .information .span{
+    width: 100%;
+}
+.cards .information .span h6{
+    background: var(--Blue);
+    width: 88%;
+    padding: 12px 60px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    font-size: 13px;
+}
+.cards .information .span h6 span{
+    font-weight: 100;
+}
+.cards .information #register{
+    background: white;
+    margin-right: 56px;
+    border-radius: 10px;
+    height: 80%;
+    padding: 18px;
+}
+.cards .information #register .inputbox{
+    padding: 0;
+    position: relative;
+}
+.cards .information #register .inputbox  input{
+    width: 100%;
+    padding-top: 7px;
+    margin-bottom: 7px;
+    border-radius: 6px;
+    padding-left: 10px;
+    padding-bottom: 7px;
+    font-size: 15px;
+    font-weight: 600;
+    color: black;
+    border: 1px solid black;
+    
+}
+.cards .information #register .inputbox  input:hover,
+.cards .information #register .inputbox  input:focus{
+    outline: none;
+}
+.cards .information #register .inputbox  button{
+    width: 100%;
+    background: var(--Green);
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px 0;
+    border: none;
+    border-radius: 6px;
+}
+.cards .information #register .inputbox #text{
+    font-size: 13px;
+    margin-bottom: 5px;
+    width: fit-content;
+}
+.cards .information .ref.valid .inputbox #text{
+    color: red ;
+}
+
+.cards .information .ref.invalid .inputbox:not(:nth-of-type(5)):after{
+    content: "\f058";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    color: green;
+}
+.cards .information #register .footer h6{
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--Grayish-Blue);
+    margin-top: 10px;
+    padding-bottom: 26px;
+}
+.cards .information #register .footer h6 a{
+    color: var(--Red);
+    text-decoration: none;
+    cursor: pointer;
+}
+@media (min-width:200px)and (max-width:991px){
+    .cards .text{
+        padding: 26px 20px 6px 20px;
+    }
+    .cards .information{
+    padding: 20px 15px 10px 30px;
+    display: flex;
+    flex-direction: column;
+    }
+    .cards .information .span{
+        width: 100%;
+        padding-right: 19px;
+        text-align: center;
+    }
+    .cards .information .span h6{
+        width: 98%;
+    }
+    .cards .information #register{
+        width: 95%;
+        padding-bottom: 46px;
+        text-align: center;
+    }
+}
